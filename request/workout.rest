@@ -1,0 +1,45 @@
+GET http://localhost:3000/api/v1/workouts/
+
+###
+
+GET http://localhost:3000/api/v1/workouts/675b53de0f01aaaede6845e2
+
+###
+
+POST http://localhost:3000/api/v1/workouts/
+Content-Type: application/json
+
+{
+  "name": "Core Buster",
+  "mode": "AMRAP 20",
+  "equipment": [
+    "rack",
+    "barbell",
+    "abmat"
+  ],
+  "exercises": [
+    "15 toes to bars",
+    "10 thrusters",
+    "30 abmat sit-ups"
+  ],
+  "trainerTips": [
+    "Split your toes to bars into two sets maximum",
+    "Go unbroken on the thrusters",
+    "Take the abmat sit-ups as a chance to normalize your breath"
+  ]
+}
+
+###
+
+PATCH http://localhost:3000/api/v1/workouts/675b53de0f01aaaede6845e2
+Content-Type: application/json
+
+{
+  "name": "Dev",
+  "mode": "AMRAP"
+}
+
+
+###
+
+DELETE http://localhost:3000/api/v1/workouts/675b53de0f01aaaede6845e2
